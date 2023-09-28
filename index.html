@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            background-color: #233142;
+            border-right: 5cm;
+            padding-top: 5cm;
+            border-radius: 2%;
+            padding-left: 5cm;
+            padding-right: 5cm;
+        }
+        .form{
+            background-color: aliceblue;
+            padding-left: 0.5cm;
+            
+        }
+        .heading{
+            display: flex;
+            align-items: flex-start;
+            justify-content: left;
+            flex-direction: column;
+        }
+        h1{
+            color: #142d4c;
+        }
+        p{
+            color: #142d4c;
+        }
+        img , p{
+            display: inline;
+
+        }
+        .pic
+        {
+            background-position: right;
+            border-radius: 2%;
+        }
+        @media (max-width : 768px) {
+            .pic {
+                background-image: url(illustration-sign-up-mobile.svg);
+                
+               
+            }
+        }
+        @media (min-width : 769px) {
+            .pic
+            {
+                background-image : url(illustration-sign-up-desktop.svg);
+                
+                
+            }
+        }
+        .sub 
+        {
+            border-radius: 2%;
+            background-color: #142d4c;
+            color : white;
+            width : 5cm;
+            height: 1cm;
+            cursor: pointer;
+
+        }
+        .em
+        {
+            border-radius: 2%;
+            background-color: #142d4c;
+            color : white;
+            width : 5cm;
+            height: 1cm;
+            top : -3cm;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <div class="heading">    
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on : </p>
+        
+        <img src="icon-list.svg" > <p>Product discovery and building what matters</p>
+        <img src="icon-list.svg" ><p>Measuring to ensure updates are a success</p>
+        <img src="icon-list.svg" ><p>And much more</p>
+        <label>Email Address</label>
+        <input type="email" required class="em" placeholder="email@company.com">
+        <button type="submit" class="sub" onclick="navigate()" >Subscribe to monthly newspaper</button>
+        
+    </div>
+    <div class="pic"></div>
+    </div>
+    <script>
+        function navigate() 
+        {
+            if(window.innerWidth <= 768) 
+            {
+                window.location.href='mobile.html';
+
+            }
+            else 
+            {
+                window.location.href='desktop.html';
+            }
+
+        }
+    </script>
+
+    
+</body>
+</html>
